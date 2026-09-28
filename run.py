@@ -46,7 +46,7 @@ class DeltaScanner():
     ResyncRequired = namedtuple("ResyncRequired", [])
 
     # 默认增量链接，第一次运行时会从这个链接开始扫描，扫描完成后会更新为新的 delta_link 以供下次增量扫描使用
-    DEFAULT_DELTA_LINK = "https://graph.microsoft.com/v1.0/me/drive/root/delta"
+    DEFAULT_DELTA_LINK = "https://graph.microsoft.com/v1.0/me/drive/root/delta?$top=500"
 
 
     def __init__(self, connection: Connection):
